@@ -143,7 +143,7 @@ if (featureArg === 'all') {
     let currentSelector = '';
     let depth = 0;
     
-    lines.forEach((line, index) => {
+    lines.forEach((line, _index) => {
       const trimmed = line.trim();
       
       // Track selector (e.g., "a:nth-of-type(1) {")
@@ -227,7 +227,7 @@ function generateGlobalStyles(featurePaths: string[]): string | null {
   globalScss += `// This file contains CSS properties that appear in 3+ different selectors\n`;
   globalScss += `// Generated: ${new Date().toISOString().split('T')[0]}\n\n`;
   
-  duplicates.forEach(({ key, props }, index) => {
+  duplicates.forEach(({ key, props }, _index) => {
     const uniqueFeatures = [...new Set(props.map(p => p.feature))];
     const usageCount = props.length;
     
@@ -250,7 +250,7 @@ function generateGlobalStyles(featurePaths: string[]): string | null {
   globalScss += `// Suggested SCSS Variables:\n`;
   globalScss += `// Add these to _variables.scss to reduce duplication\n\n`;
   
-  duplicates.slice(0, 10).forEach(({ key, props }) => {
+  duplicates.slice(0, 10).forEach(({ key, props: _props }) => {
     const [property, value] = key.split(': ');
     const varName = property.replace(/-/g, '_');
     globalScss += `// $${varName}: ${value};\n`;
@@ -280,7 +280,7 @@ function parseClassName(cls: string) {
   return { base, responsive, pseudo };
 }
 
-function mapCssToMixin(css: string, cls: string) {
+function mapCssToMixin(css: string, _cls: string) {
   // Map CSS properties to use mixins where applicable
   if (!css) return '';
   
@@ -333,10 +333,6 @@ function mapCssToMixin(css: string, cls: string) {
   return mixinLines.join(' ');
 }
 
-function indent(text: string, spaces: number) {
-  return text.split('\n').map((l) => l ? ' '.repeat(spaces) + l : l).join('\n');
-}
-
 function convertTailwindClasses(
   classes: string[],
   file: string,
@@ -345,7 +341,7 @@ function convertTailwindClasses(
   globalClasses: Set<string>,
   log: string[],
   unknownClasses: Set<string>,
-  targetFolder: string
+  _targetFolder: string
 ) {
   const blocks: Record<string, string[]> = {};
   const knownClasses: string[] = [];

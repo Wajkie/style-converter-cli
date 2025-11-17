@@ -12,7 +12,7 @@
     "dist",
     "bin",
     "scripts/postinstall.js",
-    "README.npm.md"
+    "README.md"
   ],
   "keywords": [
     "tailwind",

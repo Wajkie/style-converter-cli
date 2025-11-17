@@ -2,7 +2,7 @@
 
 🎨 CLI tool to convert Tailwind CSS and Bootstrap classes to CSS Modules with SCSS
 
-**[🚀 Live Demo](https://styleconverter.netlify.app/)** | **[📖 GitHub](https://github.com/Wajkie/tailwindConverter)**
+**[🚀 Live Demo](https://styleconverter.netlify.app/)** | **[📖 GitHub](https://github.com/Wajkie/styleConverter)**
 
 ## Installation
 
@@ -221,4 +221,4 @@ Wajkie
 
 ## Repository
 
-https://github.com/Wajkie/tailwindConverter
+https://github.com/Wajkie/styleConverter

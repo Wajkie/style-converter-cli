@@ -10,7 +10,10 @@
     "sourceMap": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "types": ["node"],
+    "noEmit": false,
+    "allowImportingTsExtensions": false
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist", "script", "src/App.tsx", "src/main.tsx", "src/**/*.tsx"]
