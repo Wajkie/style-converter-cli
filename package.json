@@ -1,6 +1,6 @@
 {
   "name": "style-converter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "CLI tool to convert Tailwind/Bootstrap classes to CSS Modules with SCSS",
   "type": "module",
   "main": "dist/index.js",
